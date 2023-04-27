@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+    <script src="https://gftruj.github.io/webzamples/aframe/controls/oculus-thumbstick-controls.js"></script>
+    <script src="oculus-thumbstick-controls.js"></script>
+    <script src="oculus-thumbstick.js"></script>
+    <script src="oculus.js"></script>
+  </head>
+  <body>
+    <a-scene gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;
+    meshoptDecoderPath: https://unpkg.com/meshoptimizer@0.16.0/meshopt_decoder.js;">
+        <a-assets>
+            <a-asset-item id="home" src="family_home/scene.gltf"></a-asset-item>
+            <!-- <a-asset-item id="cyber_truck" src="https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/cybertruck/model.gltf"></a-asset-item>
+            <a-asset-item id="house" src="https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/house-7/model.gltf"></a-asset-item>
+            <a-asset-item id="helicopter" src="https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/helicopter/model.gltf"></a-asset-item>
+            <a-asset-item id="house2" src="https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/house-3/model.gltf"></a-asset-item>
+            <a-asset-item id="house3" src="https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/house-5/model.gltf"></a-asset-item>   -->
+        </a-assets>
+      <a-entity environment="preset: forest;"></a-entity>
+      <a-entity gltf-model="#home" position="5 0.5 -10" scale="1 1 1"></a-entity>
+      <!-- <a-entity gltf-model="#house2" position="-50 0 -15" scale="7 7 7"></a-entity>
+      <a-entity gltf-model="#house3" position="20 0 -9" scale="7 7 7"></a-entity> -->
+      <!-- <a-entity gltf-model="#cyber_truck" position="3 0 -15"></a-entity>
+      <a-entity gltf-model="#helicopter" position="3 5 -15" rotation="0 -90 0"></a-entity> -->
+      <a-entity id="rig">
+        <a-camera position="0 1.6 5"></a-camera>
+        <a-entity oculus-touch-controls="hand: left" oculus-thumbstick></a-entity>
+        <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+    </a-entity>
+    </a-scene>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="oculus-thumbstick-controls.js"></script>
+    <script src="oculus-thumbstick.js"></script>
+</head>
+<body>
+    <a-scene gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;
+    meshoptDecoderPath: https://unpkg.com/meshoptimizer@0.16.0/meshopt_decoder.js;">
+        <a-assets>
+            <!-- <img id="floor" src="texture6.jpg">
+            <img id="sky2" src="skybest.jpg"> -->
+            <!-- <a-asset-item id="villagee" src="family_home/scene.gltf"> -->
+            </a-asset-item>
+            <a-asset-item id="home" src="family_home/scene.gltf"></a-asset-item>
+
+    </a-assets>
+    <!-- <a-plane material="color: #00AA00;
+    shader:flat"
+    rotation="-90 0 0"
+    scale="1000 1000 1"
+    ></a-plane> -->
+    <!-- <a-sky src="#sky2" position="200 -50 0" rotation="360"></a-sky> -->
+    <a-entity gltf-model="#home" position="24 1.187 25" scale="4 4 4"></a-entity>
+    <a-entity id="rig" position="0 5 80">
+        <a-camera position="0 3 5" user-height="1.9"></a-camera>
+        <a-entity oculus-touch-controls="hand: left" oculus-thumbstick></a-entity>
+        <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+    </a-entity>
+    </a-scene>
+</body>
+</html> -->
